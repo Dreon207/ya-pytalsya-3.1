@@ -1,0 +1,74 @@
+namespace Практическая_3
+{
+        while (true)
+ {
+        Console.WriteLine("1-Угадай число.  2-Таблица умножения.  3-Вывод делителей.  4-Выход.");
+      
+  { 
+        case 1:
+        static void Main(string[] args)
+    {
+        Random rando = new Random();
+        int i = rando.Next(100);
+        int prob = 1;
+        Console.WriteLine("Загадано число от 1 до 100, у тебя всего одна попытка;)");
+        Console.WriteLine("Введите число ");
+        int k = Convert.ToInt32(Console.ReadLine());
+        while (prob <= 20)
+        {
+            if (i == k)
+            {
+                Console.WriteLine("Хорошая работа, ты угадал");
+                break;
+            }
+            else
+            {
+                prob++;
+                {
+                    Console.WriteLine("К сожелению ты не смог угадать");
+                    break;
+                }
+            }
+           
+        }
+    }
+ }
+        break;
+        case 2;
+    {
+        static void Main(string[] args)
+    {
+        var table = new int[11, 11];
+        for (int b = 1; b < 11; ++b)
+        {
+            for (int a = 1; a < 11; ++a)
+            {
+                table[b, a] = b * a;
+            }
+        }
+        for (int b = 1; b < 11; ++b)
+        {
+            for (int a = 1; a < 11; ++a)
+            {
+                Console.Write("{0, 3}", table[b, a]);
+            }
+            Console.WriteLine();
+        }
+
+
+    }
+      break;
+     case 3:
+        
+            Console.Write("Введите число: ");
+            int num = int.Parse(Console.ReadLine());
+            for (int m = 1; m <= num; m++)
+                if (num % m == 0)
+                    Console.WriteLine("{0}/{1}", num, m);
+            break;
+        
+        case 4:
+            Environment.Exit(0);
+            break;
+    }
+
